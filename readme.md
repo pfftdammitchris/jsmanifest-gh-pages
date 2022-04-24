@@ -469,5 +469,3 @@ You will need to utilize the `--` option to pass any additional arguments:
   env:
     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
-
-See [Pull Request #368](https://github.com/tschaub/gh-pages/pull/368) for more information.
