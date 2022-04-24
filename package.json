@@ -1,0 +1,53 @@
+{
+  "author": "Christopher",
+  "bugs": {
+    "url": "https://github.com/pfftdammitchris/jsmanifest-gh-pages/issues"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.11",
+    "filenamify": "^5.1.0",
+    "find-cache-dir": "^3.3.2",
+    "mkdirp": "^1.0.4"
+  },
+  "description": "Publish files to a `gh-pages` branch on GitHub in NodeJS",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-node-resolve": "^13.2.1",
+    "rollup": "^2.70.2",
+    "rollup-plugin-esbuild": "^4.9.1",
+    "rollup-plugin-filesize": "^9.1.2",
+    "rollup-plugin-progress": "^1.1.2"
+  },
+  "exports": {
+    "default": "./dist/index.cjs",
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.cjs"
+  },
+  "homepage": "https://github.com/pfftdammitchris/jsmanifest-gh-pages#readme",
+  "keywords": [
+    "gh-pages",
+    "ghpages",
+    "jsm",
+    "jsmanifest",
+    "github",
+    "pages"
+  ],
+  "license": "ISC",
+  "main": "dist/index.cjs",
+  "module": "dist/index.cjs",
+  "name": "@jsmanifest/gh-pages",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfftdammitchris/jsmanifest-gh-pages.git"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "postbuild": "tsc --declaration --declarationDir dist --emitDeclarationOnly --esModuleInterop --skipLibChecK",
+    "prebuild": "rm -rf dist",
+    "start": "rollup -c -w",
+    "test": "test"
+  },
+  "types": "dist/index.d.ts",
+  "version": "0.0.2"
+}
